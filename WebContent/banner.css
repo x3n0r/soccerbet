@@ -1,0 +1,85 @@
+#banner { 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	background-color: #DDEEEE; 
+	min-width: 100%; 
+	z-index: 9999;/* set this to something high*/
+	display: flex;
+}
+
+#banner-content-middle, #banner-content-right { 
+	padding: 5px; 
+	border: 1px solid #000;
+}
+
+#banner-content-middle  { 
+	margin: 0 auto;
+	width: 80%;
+}
+
+.dropdown-content input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+.loginbtn-container {
+	padding-top:1em;
+}
+
+.loginbtn  {
+    background-color: #4CAF50;
+	min-width: 100px;
+    color: white;
+    padding: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+	min-width: 200px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	padding: 1em;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
