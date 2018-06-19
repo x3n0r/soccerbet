@@ -1,4 +1,4 @@
-package at.allianz.coma.soccerbet.services;
+package com.github.x3n0r.sportbet.services;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;

@@ -1,4 +1,4 @@
-package at.allianz.coma.soccerbet.services;
+package com.github.x3n0r.sportbet.services;
 
 import java.net.HttpURLConnection;
 
@@ -9,7 +9,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import at.allianz.coma.soccerbet.dao.TournamentDAO;
+import com.github.x3n0r.sportbet.dao.TournamentDAO;
 
 @Path("/tournament")
 public class TournamentService extends Service {
@@ -34,10 +34,6 @@ public class TournamentService extends Service {
 		} catch (Exception e) {
 			return buildErrorResponse(HttpURLConnection.HTTP_BAD_REQUEST, e.getMessage());
 		}
-	}
-	
-	public static void main(String[] args) {
-		(new TournamentService()).getAllTournaments();
 	}
 	
 }

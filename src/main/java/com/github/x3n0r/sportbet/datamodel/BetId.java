@@ -1,4 +1,4 @@
-package at.allianz.coma.soccerbet.datamodel;
+package com.github.x3n0r.sportbet.datamodel;
 
 import java.io.Serializable;
 import java.util.Objects;

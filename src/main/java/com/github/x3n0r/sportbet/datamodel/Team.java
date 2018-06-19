@@ -1,12 +1,8 @@
-package at.allianz.coma.soccerbet.datamodel;
-
-import java.util.List;
+package com.github.x3n0r.sportbet.datamodel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,20 +18,13 @@ public class Team {
 	private String code;
 	@Column(name = "img_url", nullable = false)
 	private String imageUrl;
-	@OneToMany(mappedBy = "host", fetch = FetchType.LAZY)
-	private List<Match> matchesAsHost;
-	@OneToMany(mappedBy = "guest", fetch = FetchType.LAZY)
-	private List<Match> matchesAsGuest;
 	
 	public Team() { }
-	public Team(String id, String name, String code, String imageUrl, List<Match> matchesAsHost,
-			List<Match> matchesAsGuest) {
+	public Team(String id, String name, String code, String imageUrl) {
 		this.id = id;
 		this.name = name;
 		this.code = code;
 		this.imageUrl = imageUrl;
-		this.matchesAsHost = matchesAsHost;
-		this.matchesAsGuest = matchesAsGuest;
 	}
 	public String getId() {
 		return id;
@@ -60,18 +49,6 @@ public class Team {
 	}
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
-	}
-	public List<Match> getMatchesAsHost() {
-		return matchesAsHost;
-	}
-	public void setMatchesAsHost(List<Match> matchesAsHost) {
-		this.matchesAsHost = matchesAsHost;
-	}
-	public List<Match> getMatchesAsGuest() {
-		return matchesAsGuest;
-	}
-	public void setMatchesAsGuest(List<Match> matchesAsGuest) {
-		this.matchesAsGuest = matchesAsGuest;
 	}
 	
 }

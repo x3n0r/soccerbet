@@ -1,12 +1,8 @@
-package at.allianz.coma.soccerbet.datamodel;
-
-import java.util.List;
+package com.github.x3n0r.sportbet.datamodel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,15 +14,12 @@ public class User {
 	private String id;
 	@Column(name = "name", nullable = false)
 	private String name;
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-	private List<Bet> bets;
 	
 	public User() { }
-	public User(String id, String name, List<Bet> bets) {
+	public User(String id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.bets = bets;
 	}
 	public String getId() {
 		return id;
@@ -39,12 +32,6 @@ public class User {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public List<Bet> getBets() {
-		return bets;
-	}
-	public void setBets(List<Bet> bets) {
-		this.bets = bets;
 	}
 	
 }

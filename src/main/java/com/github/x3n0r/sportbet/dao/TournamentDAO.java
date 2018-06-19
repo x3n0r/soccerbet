@@ -1,4 +1,4 @@
-package at.allianz.coma.soccerbet.dao;
+package com.github.x3n0r.sportbet.dao;
 
 import java.util.List;
 
@@ -6,13 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import at.allianz.coma.soccerbet.datamodel.Tournament;
+import com.github.x3n0r.sportbet.datamodel.Tournament;
 
 public class TournamentDAO implements AutoCloseable {
 
-	private static final String MODEL_CLASS_NAME = "at.allianz.coma.soccerbet.datamodel.Tournament";
+	private static final String MODEL_CLASS_NAME = Tournament.class.getCanonicalName();
 	
-	private final EntityManagerFactory factory = Persistence.createEntityManagerFactory("soccerbet");
+	private final EntityManagerFactory factory = Persistence.createEntityManagerFactory("sportbet");
 	
 	public List<Tournament> getAllTournaments() {
 		EntityManager manager = factory.createEntityManager();

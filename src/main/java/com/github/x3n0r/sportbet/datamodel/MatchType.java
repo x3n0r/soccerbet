@@ -1,12 +1,8 @@
-package at.allianz.coma.soccerbet.datamodel;
-
-import java.util.List;
+package com.github.x3n0r.sportbet.datamodel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,15 +16,12 @@ public class MatchType {
 	private String name;
 	@Column(name = "bet_value", nullable = false)
 	private float betValue;
-	@OneToMany(mappedBy = "type", fetch = FetchType.LAZY)
-	private List<Match> matches;
 	
 	public MatchType() { }
-	public MatchType(String id, String name, int betValue, List<Match> matches) {
+	public MatchType(String id, String name, int betValue) {
 		this.id = id;
 		this.name = name;
 		this.betValue = betValue;
-		this.matches = matches;
 	}
 	public String getId() {
 		return id;
@@ -47,12 +40,6 @@ public class MatchType {
 	}
 	public void setBetValue(float betValue) {
 		this.betValue = betValue;
-	}
-	public List<Match> getMatches() {
-		return matches;
-	}
-	public void setMatches(List<Match> matches) {
-		this.matches = matches;
 	}
 	
 }
