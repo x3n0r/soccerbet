@@ -6,20 +6,21 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.github.x3n0r.sportbet.datamodel.Tournament;
+import com.github.x3n0r.sportbet.datamodel.Match;
 
-public class TournamentDAO implements AutoCloseable {
+public class MatchDAO implements AutoCloseable {
 
-	private static final String MODEL_CLASS_NAME = Tournament.class.getCanonicalName();
+private static final String MODEL_CLASS_NAME = Match.class.getCanonicalName();
 	
 	private final EntityManagerFactory factory = Persistence.createEntityManagerFactory("sportbet");
 	
-	public List<Tournament> getAllTournaments() {
+	public List<Match> getAllMatches(String tournamentId) {
 		EntityManager manager = factory.createEntityManager();
 		manager.getTransaction().begin();
 		try {
-			String query = String.format("SELECT t from %s t", MODEL_CLASS_NAME);
-			return manager.createQuery(query, Tournament.class).getResultList();
+			String query = String.format("SELECT m from %s m WHERE m.tournament='%s'",
+					MODEL_CLASS_NAME, tournamentId);
+			return manager.createQuery(query, Match.class).getResultList();
 		} finally {
 			manager.getTransaction().commit();
 			manager.close();
