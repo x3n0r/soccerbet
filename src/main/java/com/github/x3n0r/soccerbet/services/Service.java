@@ -1,4 +1,4 @@
-package com.github.x3n0r.sportbet.services;
+package com.github.x3n0r.soccerbet.services;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;

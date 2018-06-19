@@ -1,4 +1,4 @@
-package com.github.x3n0r.sportbet.datamodel;
+package com.github.x3n0r.soccerbet.datamodel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,9 +9,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@IdClass(BetId.class)
-@Table(name="tbet")
-public class Bet {
+@IdClass(MatchBetId.class)
+@Table(name="tmatch_bet")
+public class MatchBet {
 
 	@Id
 	@ManyToOne
@@ -28,8 +28,8 @@ public class Bet {
 	@Column(name = "payed", nullable = false)
 	private boolean payed;
 	
-	public Bet() { }
-	public Bet(User user, Match match, int hostGoals, int guestGoals, boolean payed) {
+	public MatchBet() { }
+	public MatchBet(User user, Match match, int hostGoals, int guestGoals, boolean payed) {
 		this.user = user;
 		this.match = match;
 		this.hostGoals = hostGoals;

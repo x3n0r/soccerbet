@@ -1,4 +1,4 @@
-package com.github.x3n0r.sportbet.services;
+package com.github.x3n0r.soccerbet.services;
 
 import java.net.HttpURLConnection;
 
@@ -8,15 +8,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.github.x3n0r.sportbet.dao.TournamentDAO;
+import com.github.x3n0r.soccerbet.dao.TournamentDAO;
 
 @Path("/tournament")
 public class TournamentService extends Service {
 
-	@Path("all")
 	@GET 
 	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getAllTournaments() {
+	public Response getTournaments() {
 		try (TournamentDAO dao = new TournamentDAO()) {
 			return buildOkResponse(dao.getAllTournaments());
 		} catch (Exception e) {

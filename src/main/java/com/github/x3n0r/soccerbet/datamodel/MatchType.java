@@ -1,4 +1,4 @@
-package com.github.x3n0r.sportbet.datamodel;
+package com.github.x3n0r.soccerbet.datamodel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,18 +6,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ttournament")
-public class Tournament {
+@Table(name="tmatch_type")
+public class MatchType {
 
 	@Id
-	@Column(name = "tournament_id", nullable = false)
+	@Column(name = "match_type_id", nullable = false)
 	private String id;
 	@Column(name = "name", nullable = false)
 	private String name;
 	
-	public Tournament() { }
-	public Tournament(String id, String name) {
-		super();
+	public MatchType() { }
+	public MatchType(String id, String name) {
 		this.id = id;
 		this.name = name;
 	}

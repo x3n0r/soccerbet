@@ -1,4 +1,4 @@
-package com.github.x3n0r.sportbet.datamodel;
+package com.github.x3n0r.soccerbet.datamodel;
 
 import java.util.Date;
 

@@ -1,17 +1,17 @@
-package com.github.x3n0r.sportbet.datamodel;
+package com.github.x3n0r.soccerbet.datamodel;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-public class BetId implements Serializable {
+public class MatchBetId implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	private String user;
 	private String match;
 	
-	public BetId() { }
-	public BetId(String user, String match) {
+	public MatchBetId() { }
+	public MatchBetId(String user, String match) {
 		this.user = user;
 		this.match = match;
 	}
@@ -33,8 +33,8 @@ public class BetId implements Serializable {
 	}
 	@Override
 	public boolean equals(Object obj) {
-		if (obj instanceof BetId) {
-			BetId id = (BetId) obj;
+		if (obj instanceof MatchBetId) {
+			MatchBetId id = (MatchBetId) obj;
 			return id.getUser().equals(user) &&
 					id.getUser().equals(match);
 		}
