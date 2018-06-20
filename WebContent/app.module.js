@@ -4,6 +4,12 @@
 angular.module('matchcatApp', [
   'ngAnimate',
   'ngRoute',
+  'ngCookies',
   'matchList',
-  'tabs'
+  'tabs',
+  'loginUser',
+  'registerUser'
+  /*,
+  'AuthenticationService',
+  'FlashService'*/
 ]);

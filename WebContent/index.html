@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="ISO-8859-1">
-	<title>soccerbet - Backend</title>
-	<link rel="stylesheet" href="styles/style.css">
-	<link rel="stylesheet" href="styles/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="./script/script.js"></script>
-</head>
-<body>
-	<h1>Ooopy doopy</h1>
-	<div>
-		Me jammin' with me candy tails, ya hear me, man?
-=======
 <!doctype html>
 <html lang="en" ng-app="matchcatApp">
   <head>
@@ -29,6 +13,7 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
     <script src="app.animations.js"></script>
@@ -41,33 +26,70 @@
 	<script src="app-services/authentication.service.js"></script>
     <script src="app-services/flash.service.js"></script>
 	<script src="app-services/user.service.js"></script>
-	<!--
+	
+	<script src="login-user/login-user.module.js"></script>
+	<script src="login-user/login-user.component.js"></script>
+	<script src="register-user/register-user.module.js"></script>
+	<script src="register-user/register-user.component.js"></script>
 	<script src="home/home.controller.js"></script>
-    <script src="login/login.controller.js"></script>
-    <script src="register/register.controller.js"></script>-->
+
   </head>
   <body>  
     <div id="banner">
 		<div id="banner-content-middle">
-			This is your banner text, centered and fixed at 80% in width
+		    Hallo User < {{$rootScope.username}} >.
+			<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message">Flash Service</div>
 		</div>
-		<div class="dropdown banner-content-right">
+		<!-- <div class="dropdown banner-content-right">
 			<button class="dropbtn">Logon</button>
-				<div class="dropdown-content">
-					<input class="logoninput" type="text" name="cupuser">
-					<div class="loginbtn-container"><button class="loginbtn">Login</button></div>
-				</div>
+			<div class="dropdown-content">
+				<input class="logoninput" type="text" name="cupuser">
+				<div class="loginbtn-container"><button class="loginbtn">Login</button></div>
 			</div>
-		</div>
->>>>>>> branch 'master' of https://github.com/x3n0r/sportbet
+		</div> -->
 	</div>
 	
-	<div class="container-fluid">
+	
+  	<div class="row" ng-controller="TabsController">
+	  	<div class="col-md-2">
+	  		<ul class="nav nav-pills nav-stacked">
+	       	<li ng-class="{ active: isSet(1) }">
+	          	<a href ng-click="setTab(1)">Login</a>
+	       	</li>
+	       	<li ng-class="{ active: isSet(2) }">
+	          	<a href ng-click="setTab(2)">Register</a>
+	       	</li>
+	       	<li ng-class="{ active: isSet(3) }">
+	          	<a href ng-click="setTab(3)">Matches</a>
+	       	</li>
+	     	</ul>
+	  	</div>
+	    <div class="col-md-10">
+	  		<div class="jumbotron">
+	       		<div ng-show="isSet(1)">
+	         	 	<h1>Login</h1>
+	         	 	<login-user></login-user>
+	         	 	<!-- <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p> -->
+	        	</div>
+				<div ng-show="isSet(2)">
+	          		<h1>Register</h1>
+	          		<register-user></register-user>
+	          		<p>Profile information</p>
+	     		</div>
+	        	<div ng-show="isSet(3)">
+	        		<h1>Matches</h1>
+	        	    <match-list></match-list>
+	     		</div>
+	  		</div>
+	  	</div>
 	</div>
 	
-	<div class="view-container">
+	<!-- <div class="container-fluid">
+	</div>
+	 -->
+	<!-- <div class="view-container">
 		<div ng-view class="view-frame"></div>
 	</div>
-	
+	 -->
   </body>
 </html>

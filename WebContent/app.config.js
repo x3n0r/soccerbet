@@ -10,6 +10,9 @@ angular.
         when('/matches', {
           template: '<match-list></match-list>'
         }).
+        when('/login', {
+        	template: '<match-list></match-list>'
+        }).
         otherwise('/matches');
     }
   ]);
