@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-  module('matchcatApp').
+  module('soccerApp').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
       $locationProvider.hashPrefix('!');
@@ -11,8 +11,14 @@ angular.
           template: '<match-list></match-list>'
         }).
         when('/login', {
-        	template: '<match-list></match-list>'
+        	template: '<login-user></login-user>'
         }).
-        otherwise('/matches');
+        when('/register', {
+        	template: '<register-user></register-user>'
+        }).
+        when('/home', {
+        	template: '<home-user></home-user>'
+        }).
+        otherwise('/home');
     }
   ]);

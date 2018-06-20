@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-  module('matchcatApp').
+  module('soccerApp').
   animation('.match', function matchAnimationFactory() {
     return {
       addClass: animateIn,

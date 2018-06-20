@@ -5,7 +5,8 @@
         .module('loginUser').
         component('loginUser', {
             templateUrl: 'login-user/login-user.template.html',
-        	controller: function LoginController($location, AuthenticationService, FlashService) {
+        	controller: [ '$location', 'AuthenticationService', 'FlashService' ,
+        		function LoginController($location, AuthenticationService, FlashService) {
                 var vm = this;
 
                 vm.login = login;
@@ -28,7 +29,7 @@
                         }
                     });
                 };
-            }
+            }]
         });
     /*
         .controller('LoginController', LoginController);

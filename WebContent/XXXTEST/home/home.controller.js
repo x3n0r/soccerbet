@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('matchcatApp')
+        .module('app')
         .controller('HomeController', HomeController);
 
     HomeController.$inject = ['UserService', '$rootScope'];

@@ -19,9 +19,9 @@
 //});
 
 angular.module('tabs', [])
-.controller('TabsController', ['$scope', function($scope) {
+.controller('TabsController', ['$scope','$location', function($scope,$location) {
   $scope.tab = 1;
-
+  $location.path('/home');
   $scope.setTab = function(newTab){
     $scope.tab = newTab;
   };
