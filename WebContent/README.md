@@ -26,3 +26,6 @@ https://www.w3schools.com/Css/css_dropdowns.asp
 
 dynamically adding form fields
 https://stackoverflow.com/questions/32470928/angular-formly-adding-form-fields-dynamically-on-user-click
+
+more than one ng-view ( ng_include ) solved
+https://docs.angularjs.org/api/ng/directive/ngInclude
