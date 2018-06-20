@@ -26,31 +26,26 @@
   padding-top: 15px;
 }
 
-/* Animate view transitions with `ngView` */
-.view-container {
-  position: relative;
-}
-
-.view-frame {
+/* Animate view transitions with `jumbotron` tabs */
+.jumbotron {
   margin-top: 20px;
 }
 
-.view-frame.ng-enter,
-.view-frame.ng-leave {
-  background: white;
+.jumbotron.ng-show,
+.jumbotron.ng-hide {
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.view-frame.ng-enter {
-  animation: 1s fade-in;
+.jumbotron.ng-show {
+  animation: 0.6s fade-in;
   z-index: 100;
 }
 
-.view-frame.ng-leave {
-  animation: 1s fade-out;
+.jumbotron.ng-hide {
+  animation: 0.6s fade-out;
   z-index: 99;
 }
 

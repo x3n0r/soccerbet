@@ -7,7 +7,7 @@ angular.
     templateUrl: 'match-list/match-list.template.html',
 	controller: [ '$http', 
 	              function MatchListController($http) {
-		var self = this;		
+		var self = this;
 		$http.get('test-data/matches/matches.json').then(function(response) {
 			self.matches = response.data;
 			$http.get('test-data/teams/' + self.matches[0].HostTeam + '.json').then(function(response) {
