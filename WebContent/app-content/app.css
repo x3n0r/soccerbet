@@ -28,3 +28,75 @@ ul {
     padding: 0;
     list-style-type: none;
 }
+
+.tabs-view {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee;
+}
+
+.tabs-view h1,
+.tabs-view .h1 {
+  color: inherit;
+}
+
+.tabs-view p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.tabs-view > hr {
+  border-top-color: #d5d5d5;
+}
+.container .tabs-view,
+.container-fluid .tabs-view {
+  padding-right: 15px;
+  border-radius: 6px;
+}
+.tabs-view .container {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .tabs-view {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .container .tabs-view,
+  .container-fluid .tabs-view {
+    padding-right: 30px;
+  }
+  .tabs-view h1,
+  .tabs-view .h1 {
+    font-size: 63px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 992px) {
+    body {
+        overflow: auto;
+    }
+    #see > div {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1px) {
+  .col-md-1, .col-md-4 {
+    float: left;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+}

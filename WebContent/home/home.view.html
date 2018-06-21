@@ -23,7 +23,7 @@
      	</ul>
   	</div>
     <div class="col-md-8">
-       	<div class="jumbotron" ng-show="isSet(1)">
+       	<div class="tabs-view" ng-show="isSet(1)">
 			<h1>Hi {{vm.user.firstName}}!</h1>
 			<p>You're logged in!!</p>
 			<h3>All registered users:</h3>
@@ -34,15 +34,15 @@
 			    </li>
 			</ul>
 		</div>
-		<div class="jumbotron" ng-show="isSet(2)">
+		<div class="tabs-view" ng-show="isSet(2)">
 			<h1>Profile page</h1>
           	<p>Profile information</p>
      	</div>
-        <div class="jumbotron" ng-show="isSet(3)">
+        <div class="tabs-view" ng-show="isSet(3)">
 			<match-list></match-list>
      	</div>
-        <div class="jumbotron" ng-show="isSet(4)">
-			visualization
+        <div class="tabs-view" ng-show="isSet(4)">
+			<visualize-data></visualize-data>
      	</div>
 	</div>
 </div>

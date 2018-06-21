@@ -26,25 +26,25 @@
   padding-top: 15px;
 }
 
-/* Animate view transitions with `jumbotron` tabs */
-.jumbotron {
+/* Animate view transitions with `tabs-view` tabs */
+.tabs-view {
   margin-top: 20px;
 }
 
-.jumbotron.ng-show,
-.jumbotron.ng-hide {
+.tabs-view.ng-show,
+.tabs-view.ng-hide {
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.jumbotron.ng-show {
+.tabs-view.ng-show {
   animation: 0.6s fade-in;
   z-index: 100;
 }
 
-.jumbotron.ng-hide {
+.tabs-view.ng-hide {
   animation: 0.6s fade-out;
   z-index: 99;
 }

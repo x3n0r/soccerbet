@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'matchList'])
+        .module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'matchList', 'visualizeData'])
         .config(config)
         .run(run);
 
