@@ -35,8 +35,12 @@
 		      		<div class="short-div">{{match.GuestGoals}}</div>
 		    	</div>
 		    	<div class="col-xs-1 vcenter"><div class="vertical-line" style="height: 50px;"></div></div>
-		    	<div class="col-md-1 vcenter"><input class="betinp" type="text" name="fname" size="1"></div>
+		    	<div class="col-md-1 vcenter"><input class="betinp" type="text" name="fname" size="1" />{{match.Payed | checkmark}}</div>
+
+					<div  class="testu" style="width:100px">{{match.Winner}}</div>
+
 			</div>
 		</div>
+
 	</li>
 </ul>

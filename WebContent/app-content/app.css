@@ -24,6 +24,13 @@ div.vertical-line{
     float: none;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
 ul {
     padding: 0;
     list-style-type: none;

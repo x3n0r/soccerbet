@@ -5,7 +5,9 @@
         "HostTeam": "RUS", 
 		"GuestTeam": "SAU",
 		"HostGoals":5,
-		"GuestGoals":0
+		"GuestGoals":0,
+		"Payed":1,
+		"Winner": [ "1" , "2", "3", "2", "3", "2", "3", "2", "3", "2", "3" ]
     },
 	{
         "id": 0,
@@ -13,7 +15,9 @@
         "HostTeam": "RUS", 
 		"GuestTeam": "SAU",
 		"HostGoals":5,
-		"GuestGoals":0
+		"GuestGoals":0,
+		"Payed":0,
+		"Winner": [ "1" , "2", "3", "2", "3", "2", "3" ]
     },
     {
         "id": 0,
@@ -21,7 +25,9 @@
         "HostTeam": "RUS", 
 		"GuestTeam": "SAU",
 		"HostGoals":5,
-		"GuestGoals":0
+		"GuestGoals":0,
+		"Payed":1,
+		"Winner": [ "1" , "2", "3", "2", "3", "2", "3" ]
     },
     {
         "id": 0,
@@ -29,7 +35,9 @@
         "HostTeam": "RUS", 
 		"GuestTeam": "SAU",
 		"HostGoals":5,
-		"GuestGoals":0
+		"GuestGoals":0,
+		"Payed":0,
+		"Winner": [ "1" , "2", "3", "2", "3", "2", "3" ]
     },
     {
         "id": 1,
@@ -37,6 +45,8 @@
         "HostTeam": "EGY", 
 		"GuestTeam": "URU",
 		"HostGoals":0,
-		"GuestGoals":0
+		"GuestGoals":0,
+		"Payed":1,
+		"Winner": [ "1" , "2", "3", "2", "3", "2", "3" ]
     }
 ]
